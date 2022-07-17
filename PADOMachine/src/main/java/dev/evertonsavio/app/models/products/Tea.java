@@ -1,19 +1,18 @@
 package dev.evertonsavio.app.models.products;
 
-public class Tea implements HotDrink{
+public class Tea extends HotDrink{
 
-    private int quantity = 3;
-    private int temperature = 3;
-    private int sugar = 3;
-
-    public Tea() {}
+    public Tea()
+    {
+        super(DefaultDrink.TEA_DEFAULT);
+    }
 
     @Override
     public String toString() {
         return "TEA: {" +
-                "\"quantity\":" + quantity +
-                ", \"temperature\":" + temperature +
-                ", \"sugar\":" + sugar +
+                "\"quantity\":" + this.getQuantity() +
+                ", \"temperature\":" + this.getTemperature() +
+                ", \"sugar\":" + this.getSugar() +
                 "}";
     }
 
