@@ -26,6 +26,8 @@ public class DrinkMachine {
         while (true)
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+            //TODO FIX BUG STRING VAZIA
             int valor = Integer.parseInt(reader.readLine());
             System.out.println("Valor informado pelo usuário: " + valor);
             if(valor < machines.size() && valor >= 0) {
