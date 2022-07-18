@@ -30,8 +30,7 @@ public class DrinkMachine {
             int valor;
             String line = reader.readLine();
 
-            if(!line.equalsIgnoreCase("")) {valor = Integer.parseInt(line);
-            }else {valor = 99;}
+            valor = (!line.equalsIgnoreCase("")) ? Integer.parseInt(line) : 99;
 
             System.out.println("Valor informado pelo usuário: " + valor);
             if(valor < machines.size() && valor >= 0) {
